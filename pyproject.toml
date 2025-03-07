@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "deer-kgc"
+version = "0.1.0"
+description = "A short description of your project."
+authors = [
+    { name = "tj-coding", email = "jinno.tomoyuki.jx3@naist.ac.uk" }
+]
+dependencies = [
+    "beartype",
+    "typer",
+    "tqdm",
+    "torch",
+    "transformers"
+]
+requires-python = ">=3.8"
+license = { text = "MIT" }
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "black",
+    "flake8"
+]
+
+[tool.black]
+line-length = 88
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
