@@ -3,9 +3,10 @@ requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "deer-kgc"
+name = "deer-probe"
 version = "0.1.0"
-description = "A short description of your project."
+description = "DEER is an encoder-based knowledge graph completion (KGC) model that uses embedding vectors from generative language models for few-shot learning. It retains in-context learning while ensuring efficient large-scale inference without fine-tuning. DEER excels at predicting new relation types in small KGs and aligns with LAMA for knowledge probing, making it a scalable tool for evaluating factual knowledge in PLMs."
+readme = "README.md"
 authors = [
     { name = "tj-coding", email = "jinno.tomoyuki.jx3@naist.ac.uk" }
 ]
@@ -18,6 +19,11 @@ dependencies = [
 ]
 requires-python = ">=3.8"
 license = { text = "MIT" }
+
+[project.urls]
+Homepage = "https://github.com/TJ-coding/deer"
+Repository = "https://github.com/TJ-coding/deer"
+Issues = "https://github.com/TJ-coding/deer/issues"
 
 [project.optional-dependencies]
 dev = [
