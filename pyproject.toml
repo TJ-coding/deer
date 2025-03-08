@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "deer-probe"
-version = "0.1.0"
+version = "0.1.1"
 description = "DEER is an encoder-based knowledge graph completion (KGC) model that uses embedding vectors from generative language models for few-shot learning. It retains in-context learning while ensuring efficient large-scale inference without fine-tuning. DEER excels at predicting new relation types in small KGs and aligns with LAMA for knowledge probing, making it a scalable tool for evaluating factual knowledge in PLMs."
 readme = "README.md"
 authors = [

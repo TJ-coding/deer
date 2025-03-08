@@ -1,6 +1,11 @@
+<p align="center">
+  <img width="460" height="300" src="logo.svg">
+</p>
+
 # 🦌 DEER: DEcoder-Embedding based Relational KGC/Probe 
   ⚠️ This project is still under development, there will likely be disruptive changes in the future.
 
+DEER (DEcoder-Embedding-based Relational KGC) is an encoder-based KGC model that utilizes embedding vectors acquired from a generative PLM. Unlike traditional encoder-based methods, DEER retains in-context learning capabilities while avoiding the slow inference of decoder-based approaches.
 ## 🧪 Installation
 `pip install deer-probe`
 
