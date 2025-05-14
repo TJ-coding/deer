@@ -2,9 +2,9 @@ from typing import Dict, List, Tuple
 import torch
 from beartype import beartype
 
-from encoder_model import PromptEOL_Encoder
-from prompt_templates import query2prompts, tail_entities2prompts
-from post_processing import compute_target_tail_indecies, compute_target_tail_ranks, compute_metrics
+from .encoder_model import PromptEOL_Encoder
+from .prompt_templates import query2prompts, tail_entities2prompts
+from .post_processing import compute_target_tail_indecies, compute_target_tail_ranks, compute_metrics
 
 @beartype
 def save_encodings(embeddings:List[torch.Tensor], embeddings_save_path:str):
