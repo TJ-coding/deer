@@ -51,7 +51,7 @@ class PromptEOL_Encoder:
         
     @beartype
     @staticmethod
-    def encode(llm_inputs: List[LLMInputs], model: PreTrainedModel, device: str)->torch.Tensor:
+    def encode(llm_inputs: List[LLMInputs], model: PreTrainedModel, device: torch.device)->torch.Tensor:
         last_vectors: List[torch.Tensor] = []
         with torch.no_grad():
             for llm_input in tqdm(llm_inputs, total=len(llm_inputs)):
@@ -63,7 +63,7 @@ class PromptEOL_Encoder:
 
                 # Extract the vector corresponding to the last token
                 last_vector = last_hidden_state[:, -1, :]
-                if device!='cpu':
+                if device!=torch.device('cpu'):
                     last_vector = last_vector.cpu()
                 last_vectors.append(last_vector)
         last_vectors = torch.concat(last_vectors, dim=0)
