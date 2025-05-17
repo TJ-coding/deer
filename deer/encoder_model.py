@@ -31,7 +31,7 @@ class PromptEOL_Encoder:
             print(f'Number of devices: {number_of_devices}')
             self.model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto",  # Distributes layers across GPUs
             offload_folder=None )
-            self.device = torch.cuda.current_device()
+            self.device = 'cuda'
             
         self.model.eval()
         
